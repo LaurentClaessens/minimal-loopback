@@ -1,5 +1,22 @@
 # My loopback helper
 
+This is a minimalistic server/client toy model. The aim is to have a basic html/javascript client-side stuff that allows to create some objects on the loopback server. 
+
+In this file we learn from scratch to
+
+- install loopback
+- set up the server
+- install, set up and laund mongodb
+- set up the server for basic html rendering
+- create an html/javascript/angular client which is sufficient to create some object.
+
+We will not learn
+
+- the good practices to make the javascript side scalable/maintanable 
+- install the softwares from your operating system point of view. We assume in particular mongo and npm to be available.
+
+What you have here after cloning is the result of having followed this tutorial.
+
 ## installation
 
 ### Directory manipulations
@@ -169,12 +186,42 @@ Now any requirement like
 ```
 will be interpreted as `toy/client/js/bla/blo.js` and will be served.
 
-# NEXT
+### The html part
 
-Maintenant il faut créer des fonctions qui font du GET et du POST vers mon serveur loopback
+### Creating the files
+
+We need an `html` page able to use some javascript. The files are
+
+- `toy/client/html/mainPage.html`
+- `toy/client/js/mainPage.js`
+
+Thus the head is :
+
 ```
-npm install angular-resource --save
-``` 
-Le mieux est de faire ça dans la racine du projet pour que le processus d'installation l'installa automatiquement
-avec `npm install` qui va regarder le fichier package-lock.json
+<!DOCTYPE html>
+<html lang='fr'>
+<head>
+    <meta charset="utf-8" />
+    <title>My toy app</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="mainPage.js"></script>
+</head>
+
+HERE COMES THE BODY
+
+</html>
+```
+
+The controller will be the function `mainPageController` and we "import" it as `MPcontroller` (MP as main page)
+
+
+```
+<body ng-app="mainPageApp" ng-controller="mainPageController as MPcontroller">
+
+</body>
+```
+
+#### minimal Angular app
+
+
 
