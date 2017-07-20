@@ -13,7 +13,7 @@
 
 function mainPageControllerFunction()
 {
-    this.blah="default blah";
+    this.author="Steve Arapporteunebiere";
 };
 
 var app=angular.module('mainPageApp',[]);
