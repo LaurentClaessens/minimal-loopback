@@ -6,3 +6,4 @@ Here I describe some stuff I do beyond my tutorial. That is from commit `71cc094
 
 Loopback has already created the 'User' model. Let us make the books belong to an user.
 
+In fact we are not going beyond because, from the beginning, we created a "note" loopback application with no user authentication.
