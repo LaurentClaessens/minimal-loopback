@@ -223,5 +223,24 @@ The controller will be the function `mainPageController` and we "import" it as `
 
 #### minimal Angular app
 
+The minimal is to attach a text input zone to a controller variable. Here is the 'html' code :
 
+```
+    <input type="text" ng-model="MPcontroller.blah">    
+    <br>
+    You type : {{MPcontroller.blah}}
+```
 
+and the 'js' part :
+
+```
+function mainPageControllerFunction()
+{
+    this.blah="default blah";
+};
+
+var app=angular.module('mainPageApp',[]);
+app.controller('mainPageController', mainPageControllerFunction);
+```
+
+The result is on the commit number `` (obviously the commit number given here is not part of what you get by checking out this commit).
