@@ -7,4 +7,5 @@ The purpose of this repository is twofold :
 - a comprehensive tutorial for that 
 - play with that.
 
-For the tutorial, see the [tutorial file](TUTORIAL.md), and see the result on commit ``.
+For the tutorial, see the [tutorial file](TUTORIAL.md), and see the result on commit `` (BOOOM !! THE COMMIT NUMBER DISAPEARD !!!
+).
