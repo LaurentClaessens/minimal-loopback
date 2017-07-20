@@ -12,7 +12,8 @@ In this file we learn from scratch to
 
 We will not learn
 
-- the good practices to make the javascript side scalable/maintanable 
+- the good practices to make the javascript side scalable/maintainable,
+- create the css, the app.js and other redirections like that,
 - install the softwares from your operating system point of view. We assume in particular mongo and npm to be available.
 
 What you have here after cloning is the result of having followed this tutorial.
@@ -127,12 +128,9 @@ For creating the model :
 For the properties we will have :
 
 * author : string
-
-We also create a model 'note' which will have the property 
-
 * content : string
 
-Since loopback had yet created 'Note' for us, we juste remove that editing the file
+Since loopback had yet created 'Note' for us, we just remove that editing the file
 `toy/server/model-config-json`.
 
 Now, relaunching our server and looking at `http://0.0.0.0:3000/explorer/#!/Note/Note_create`, we see that 'Note' has disappeared.
@@ -144,10 +142,8 @@ Let's make the relations.
 ./node_modules/loopback-cli/bin/loopback-cli.js relation
 ```
 
-* note
- - belongs to one book
-* book
- - has many note
+* note belongs to one book
+* book has many note
 
 ## Client
 
@@ -257,18 +253,42 @@ Loopback can create for you some (quite complicated) javascript obkects which ar
 form the requests.
 
 ```
-mkdir -p <toy>client/js/services
-$ lb-ng server/server.js client/js/services/lb-services.js
+npm install strongloop --save
 ```
 
+If you install it with ``-g`, the executable ``lb-ng` is created (it is a link). If not (as I do), we have to understand where is the real executable. Here is then answer.
+
+```
+mkdir -p <toy>client/js/services
+```
+
+The following has to be launched from the main directory of your application (the directory which is named <toy>).
+```
+./node_modules/strongloop/node_modules/loopback-sdk-angular-cli/bin/lb-ng.js server/server.js client/js/services/lb-services.js
+```
+
+In our minimalistic application, we have defined no relations for the user, the access tokens and so on. So you will be slightly insulted by loopback but it is not a big deal.
+
+### Pause : what is happening
+
+The file `<toy>/client/js/services/lb-services.js` contains a quite complicated object ``Book`. This is a module which contains the loopback services. This object will be made available to our html page by including it in the usual way :
+```
+<script src=services/lb-services.lb></script>
+```
+
+That stuff uses the package `angular-resource` so we install it :
+```
+npm install angular-resource --save
+```
+
+### The final html
+
+For the user, want to present 
+
+* a text zone asking for an author name
+* a button which creates the book
 
 # NEXT
 
-Il faut créer le fichier lb-services.js
-
-#### The button adding a book
-
-
-
-
+### The controller
 

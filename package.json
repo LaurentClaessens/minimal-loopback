@@ -11,6 +11,7 @@
     "posttest": "npm run lint && nsp check"
   },
   "dependencies": {
+    "angular-resource": "^1.6.5",
     "compression": "^1.0.3",
     "cors": "^2.5.2",
     "fs": "0.0.1-security",
@@ -23,7 +24,8 @@
     "loopback-datasource-juggler": "^2.39.0",
     "path": "^0.12.7",
     "serve-favicon": "^2.0.1",
-    "strong-error-handler": "^2.0.0"
+    "strong-error-handler": "^2.0.0",
+    "strongloop": "^6.0.3"
   },
   "devDependencies": {
     "eslint": "^3.17.1",
