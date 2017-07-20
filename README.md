@@ -245,6 +245,13 @@ app.controller('mainPageController', mainPageControllerFunction);
 
 The result is on the commit number `5e60e567ddb34b13efac4314f646cf69aa4c52a7` (obviously the commit number given here is not part of what you get by checking out this commit).
 
+# NEXT
+
+Il faut créer le fichier lb-services.js
+
 #### The button adding a book
+
+
+
 
 
