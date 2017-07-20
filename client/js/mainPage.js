@@ -16,14 +16,16 @@ function mainPageControllerFunction(Book)
     this.author="Steve Arapporteunebiere";
     this.addBook=function()
     {
-        //var bc = Book.create();
-        bc = 'zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz';
+        var bc = Book.create();
         console.log(bc);
     }
 };
 
-var app=angular.module('mainPageApp',[]);
+// How is our controller aware of the module 'Book' ?
+// 'Book' is exported (with many other stuff) at the top of 'lb-services.js' under the module name
+// 'lsServices'.
+// So we create our app 'mainPageApp' depending on 'lbServives' and when we create the controller
+// we pass to 'mainPageControllerFunction' the (sub)module 'Boook'.
 
-
-// The important point : we pass the object 'Book' to the function, so that loopback is exposed.
+var app=angular.module('mainPageApp',['lbServices']);
 app.controller('mainPageController', ['Book',mainPageControllerFunction]);
