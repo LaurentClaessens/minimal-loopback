@@ -11,10 +11,19 @@
 // and to use 'this'. Then use the controller using its alias created by
 // ng-controller="<controller name> as <controller alias>">
 
-function mainPageControllerFunction()
+function mainPageControllerFunction(Book)
 {
     this.author="Steve Arapporteunebiere";
+    this.addBook=function()
+    {
+        //var bc = Book.create();
+        bc = '3';
+        console.log(bc);
+    }
 };
 
 var app=angular.module('mainPageApp',[]);
-app.controller('mainPageController', mainPageControllerFunction);
+
+
+// The important point : we pass the object 'Book' to the function, so that loopback is exposed.
+app.controller('mainPageController', ['Book',mainPageControllerFunction]);

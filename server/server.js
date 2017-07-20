@@ -10,6 +10,7 @@ const path=require('path');
 const express=require("express");
 app.use(express.static(path.resolve(__dirname,"../client/html")));
 app.use(express.static(path.resolve(__dirname,"../client/js")));
+app.use(express.static(path.resolve(__dirname,"../client/vendor")));
 
 
 app.start = function() {

@@ -281,6 +281,20 @@ That stuff uses the package `angular-resource` so we install it :
 npm install angular-resource --save
 ```
 
+In order to load these packages in our html/javascript code, we copy them in the directory `<toy>/client/js/vendor`.
+
+Note : in a real application, it seems preferable to make copy them by an 'install.sh' scripts which launches `npm install` before, in order to get the latest version.
+
+```
+mkdir -p <toy>/client/vendor
+cp -r <toy>/node_modules/angular-resource <toy>/client/vendor
+```
+
+In order to have these files served, we have to redo the 'express' static server trick. So add the following line with the others.
+```
+app.use(express.static(path.resolve(__dirname,"../client/vendor")));
+```
+
 ### The final html
 
 For the user, want to present 
@@ -294,5 +308,5 @@ The extremely important point is the controller to get a reference to the 'Book'
 
 ### So what ?
 
-I'm not describing here how to create these files. Instead you should read the comments in the files themselves.
+I'm not describing here how to fill these files. Instead you should read the comments in the files themselves.
 
