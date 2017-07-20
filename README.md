@@ -282,6 +282,7 @@ npm install angular-resource --save
 npm install angular --save
 npm install bootstrap --save
 npm install jquery --save
+npm install angulat-ui-router --save
 ```
 
 In order to load these packages in our html/javascript code, we copy them in the directory `<toy>/client/js/vendor`.
@@ -294,6 +295,7 @@ cp -r <toy>/node_modules/angular-resource <toy>/client/vendor
 cp -r <toy>/node_modules/angular <toy>/client/vendor
 cp -r <toy>/node_modules/bootsrap <toy>/client/vendor
 cp -r <toy>/node_modules/jquery <toy>/client/vendor
+cp -r <toy>/node_modules/angulat-ui-router <toy>/client/vendor
 ```
 
 In order to have these files served, we have to redo the 'express' static server trick. So add the following line with the others.
