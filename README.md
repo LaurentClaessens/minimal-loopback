@@ -288,7 +288,11 @@ For the user, want to present
 * a text zone asking for an author name
 * a button which creates the book
 
-# NEXT
-
 ### The controller
+
+The extremely important point is the controller to get a reference to the 'Book' object.
+
+### So what ?
+
+I'm not describing here how to create these files. Instead you should read the comments in the files themselves.
 
