@@ -16,8 +16,8 @@ function mainPageControllerFunction(Book)
     this.author="Steve Arapporteunebiere";
     this.addBook=function()
     {
-        var bc = Book.create();
-        console.log(bc);
+        newBook={"author":this.author};
+        Book.create(newBook);           // <---- This line makes the magic.
     }
 };
 
