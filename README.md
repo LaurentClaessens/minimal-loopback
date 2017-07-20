@@ -318,3 +318,15 @@ The extremely important point is the controller to get a reference to the 'Book'
 
 I'm not describing here how to fill these files. Instead you should read the comments in the files themselves.
 
+The minimal app is working on the commit number `f4e44cee1e3373f238abc79c4f9a869fea06cca4`.
+
+### Test case
+
+* Launch the server (`node .`)
+* Connect to `http://0.0.0.0:3000/explorer/` and try a GET on 'book'. You should find nothing (or the ones you created for testing purpose).
+* Connect to `http://0.0.0.0:3000/mainPage.html` and add a book. There is only one button.
+* Try a GET on 'books' in the loopback's explorer. You get the one you just created.
+* Close the server.
+* Re-launch the server.
+* Connect to the loopback's explorer and make a GET on 'books'. It is still there !!
+
