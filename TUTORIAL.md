@@ -1,3 +1,4 @@
+# minimalistic loopback tutorial
 
 This is a minimalistic server/client toy model. The aim is to have a basic html/javascript client-side stuff that allows to create some objects on the loopback server. 
 
@@ -5,8 +6,8 @@ In this file we learn from scratch to
 
 - install loopback
 - set up the server
-- install, set up and laund mongodb
-- set up the server for basic html rendering
+- install, set up and launch mongodb
+- set up the server for basic html/js serving
 - create an html/javascript/angular client which is sufficient to create some object.
 
 We will not learn
