@@ -221,7 +221,7 @@ The controller will be the function `mainPageController` and we "import" it as `
 </body>
 ```
 
-#### minimal Angular app
+#### Minimal Angular app
 
 The minimal is to attach a text input zone to a controller variable. Here is the 'html' code :
 
@@ -244,3 +244,7 @@ app.controller('mainPageController', mainPageControllerFunction);
 ```
 
 The result is on the commit number `5e60e567ddb34b13efac4314f646cf69aa4c52a7` (obviously the commit number given here is not part of what you get by checking out this commit).
+
+#### The button adding a book
+
+
