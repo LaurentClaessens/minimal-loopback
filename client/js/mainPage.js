@@ -17,7 +17,7 @@ function mainPageControllerFunction(Book)
     this.addBook=function()
     {
         //var bc = Book.create();
-        bc = '3';
+        bc = 'zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz';
         console.log(bc);
     }
 };

@@ -279,6 +279,9 @@ The file `<toy>/client/js/services/lb-services.js` contains a quite complicated 
 That stuff uses the package `angular-resource` so we install it :
 ```
 npm install angular-resource --save
+npm install angular --save
+npm install bootstrap --save
+npm install jquery --save
 ```
 
 In order to load these packages in our html/javascript code, we copy them in the directory `<toy>/client/js/vendor`.
@@ -288,6 +291,9 @@ Note : in a real application, it seems preferable to make copy them by an 'insta
 ```
 mkdir -p <toy>/client/vendor
 cp -r <toy>/node_modules/angular-resource <toy>/client/vendor
+cp -r <toy>/node_modules/angular <toy>/client/vendor
+cp -r <toy>/node_modules/bootsrap <toy>/client/vendor
+cp -r <toy>/node_modules/jquery <toy>/client/vendor
 ```
 
 In order to have these files served, we have to redo the 'express' static server trick. So add the following line with the others.
