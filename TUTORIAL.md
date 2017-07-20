@@ -1,4 +1,4 @@
-# minimalistic loopback tutorial
+# Minimalistic loopback tutorial
 
 This is a minimalistic server/client toy model. The aim is to have a basic html/javascript client-side stuff that allows to create some objects on the loopback server. 
 
