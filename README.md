@@ -17,7 +17,11 @@ We will not learn
 
 What you have here after cloning is the result of having followed this tutorial.
 
-## installation
+## Prerequiste
+
+Do not clone this repository in the directory in which you plan to install your toy application.
+
+## Installation
 
 ### Directory manipulations
 
@@ -188,7 +192,7 @@ will be interpreted as `toy/client/js/bla/blo.js` and will be served.
 
 ### The html part
 
-### Creating the files
+### Creating your files
 
 We need an `html` page able to use some javascript. The files are
 
@@ -243,7 +247,20 @@ var app=angular.module('mainPageApp',[]);
 app.controller('mainPageController', mainPageControllerFunction);
 ```
 
-The result is on the commit number `5e60e567ddb34b13efac4314f646cf69aa4c52a7` (obviously the commit number given here is not part of what you get by checking out this commit).
+The result is on the commit number `5e60e567ddb34b13efac4314f646cf69aa4c52a7` (obviously the commit number given here is
+ not part of what you get by checking out this commit).
+
+### Generating the loopback files
+
+What you need to interact with your "online" database is to produce the correct GET/POST requests. 
+Loopback can create for you some (quite complicated) javascript obkects which are aware of the correct URL's and the way to
+form the requests.
+
+```
+mkdir -p <toy>client/js/services
+$ lb-ng server/server.js client/js/services/lb-services.js
+```
+
 
 # NEXT
 
