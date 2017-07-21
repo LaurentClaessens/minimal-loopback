@@ -137,6 +137,7 @@ Since loopback had yet created 'Note' for us, we just remove that editing the fi
 
 Now, relaunching our server and looking at `http://0.0.0.0:3000/explorer/#!/Note/Note_create`, we see that 'Note' has disappeared.
 
+
 ### Relations
 
 Let's make the relations.
